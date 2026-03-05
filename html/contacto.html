@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto SOC | CiberSystems</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="res/ciber_logo.png">
+    <style>
+        /* Estilos específicos para el formulario de contacto integrados en la página */
+        .cyber-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            border-radius: 6px;
+            font-family: inherit;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 8px var(--accent-glow);
+        }
+        .btn-submit {
+            background-color: var(--accent-primary);
+            color: var(--bg-main);
+            border: none;
+            padding: 1rem;
+            font-weight: 800;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            margin-top: 0.5rem;
+        }
+        .btn-submit:hover {
+            background-color: #7dd3fc;
+        }
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+        .location-info {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <img src="res/ciber_logo.png" alt="Logo Lince CiberSystems">
+        <h1>CiberSystems</h1>
+    </div>
+    <nav>
+        <a href="index.html">Plataforma</a>
+        <a href="equipo.html">Nuestro Equipo</a>
+        <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="section">
+        <h3>Centro de Reporte de Incidentes (SOC)</h3>
+        <p>¿Ha detectado una anomalía en su perímetro Zero Trust? Por estrictos protocolos de seguridad, nuestro equipo de respuesta táctica no procesa alertas a través de correo electrónico estándar. Por favor, utilice el siguiente formulario cifrado de triaje.</p>
+
+        <form class="cyber-form" onsubmit="event.preventDefault(); alert('ERROR 503: Conexión con el servidor de base de datos de tickets rechazada. Por favor, contacte con el Administrador de Sistemas local.');">
+            
+            <div class="form-group">
+                <label for="id_operador">ID de Operador / Usuario del Sistema:</label>
+                <input type="text" id="id_operador" class="form-control" placeholder="Ej: c.ruiz" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel_alerta">Nivel de Amenaza:</label>
+                <select id="nivel_alerta" class="form-control">
+                    <option>Nivel 3 - Sospecha de Phishing / SPAM</option>
+                    <option>Nivel 2 - Intento de Fuerza Bruta en Perímetro</option>
+                    <option>Nivel 1 - Brecha Crítica (Compromiso de Datos / Ransomware)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción Técnica del Incidente:</label>
+                <textarea id="descripcion" class="form-control" rows="5" placeholder="Incluya IPs sospechosas, hashes de malware o comportamientos anómalos detectados en los logs..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">ENVIAR COMUNICACIÓN</button>
+        </form>
+
+        <div class="location-info">
+            <p><strong>Ubicación Física del Centro de Operaciones:</strong> GSyA Lab F1.11, Edificio Fermín Caballero, Planta 1ª.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logos">
+            <img src="res/gsya_logo.png" alt="Grupo de Seguridad y Auditoría (GSyA)">
+            <img src="res/esi_logo.png" alt="Escuela Superior de Informática (ESI)">
+            <img src="res/uclm_logo.png" alt="Universidad de Castilla-La Mancha (UCLM)">
+        </div>
+        <div>&copy; <span id="current-year"></span> CiberSystems. Todos los derechos reservados. Portal corporativo público.</div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

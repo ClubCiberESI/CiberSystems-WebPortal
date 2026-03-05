@@ -1,0 +1,10 @@
+services:
+  web_corporativa:
+    image: nginx:alpine
+    container_name: cibersystems_portalWeb
+    restart: always   # ¡La magia! Se reiniciará solo si la RPi se apaga.
+    ports:
+      - "80:80"       # Expone el puerto 80 al exterior
+    volumes:
+      - ./html:/usr/share/nginx/html:ro   # Monta tu web en modo solo lectura
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro # Aplica el dominio
