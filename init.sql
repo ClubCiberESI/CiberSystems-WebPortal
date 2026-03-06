@@ -35,9 +35,9 @@ INSERT INTO operadores (usuario, nombre, rol, estado) VALUES
 
 -- Insertar la trampa (Las credenciales SSH en texto plano)
 INSERT INTO tickets_internos (de_usuario, para_usuario, mensaje) VALUES 
-('m.vidal', 'c.ruiz', 'Carlos, revisa las alertas del firewall del Nivel 4, tenemos mucho ruido hoy.'),
-('c.ruiz', 'j.garcia', 'Javi, te he reseteado la contraseña del servidor Linux para que puedas sacar tus scripts personales antes de irte. Tu nueva clave temporal es: MaverickSOC2025. Borra este mensaje cuando la leas.'),
-('j.garcia', 'c.ruiz', 'Recibido. Me descargo mis cosas y cierro sesión. ¡Nos vemos en el Airsoft!');
+('m.vidal', 'cruiz', 'Carlos, revisa las alertas del firewall del Nivel 4, tenemos mucho ruido hoy.'),
+('c.ruiz', 'jgarcia', 'Javi, te he reseteado la contraseña del servidor Linux para que puedas sacar tus scripts personales antes de irte. Tu nueva clave temporal es: MaverickSOC2025. Borra este mensaje cuando la leas.'),
+('j.garcia', 'cruiz', 'Recibido. Me descargo mis cosas y cierro sesión. ¡Nos vemos en el Airsoft!');
 
 -- Insertar la primera Flag del CTF (User Flag de Base de Datos)
 INSERT INTO flags_auditoria (flag_code, descripcion) VALUES 
