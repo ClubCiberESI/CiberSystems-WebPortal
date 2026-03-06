@@ -29,15 +29,15 @@ CREATE TABLE flags_auditoria (
 
 -- Insertar datos de los empleados
 INSERT INTO operadores (usuario, nombre, rol, estado) VALUES 
-('m.vidal', 'Marta Vidal', 'CEO', 'ACTIVO'),
-('c.ruiz', 'Carlos Ruiz', 'Lead SysAdmin', 'ACTIVO'),
-('j.garcia', 'Javier Garcia', 'Director SOC', 'BAJA_PENDIENTE');
+('mvidal', 'Marta Vidal', 'CEO', 'ACTIVO'),
+('cruiz', 'Carlos Ruiz', 'Lead SysAdmin', 'ACTIVO'),
+('jgarcia', 'Javier Garcia', 'Director SOC', 'BAJA_PENDIENTE');
 
 -- Insertar la trampa (Las credenciales SSH en texto plano)
 INSERT INTO tickets_internos (de_usuario, para_usuario, mensaje) VALUES 
-('m.vidal', 'cruiz', 'Carlos, revisa las alertas del firewall del Nivel 4, tenemos mucho ruido hoy.'),
-('c.ruiz', 'jgarcia', 'Javi, te he reseteado la contraseña del servidor Linux para que puedas sacar tus scripts personales antes de irte. Tu nueva clave temporal es: MaverickSOC2025. Borra este mensaje cuando la leas.'),
-('j.garcia', 'cruiz', 'Recibido. Me descargo mis cosas y cierro sesión. ¡Nos vemos en el Airsoft!');
+('mvidal', 'cruiz', 'Carlos, revisa las alertas del firewall del Nivel 4, tenemos mucho ruido hoy.'),
+('cruiz', 'jgarcia', 'Javi, te he reseteado la contraseña del servidor Linux para que puedas sacar tus scripts personales antes de irte. Tu nueva clave temporal es: MaverickSOC2025. Borra este mensaje cuando la leas.'),
+('jgarcia', 'cruiz', 'Recibido. Me descargo mis cosas y cierro sesión. ¡Nos vemos en el Airsoft!');
 
 -- Insertar la primera Flag del CTF (User Flag de Base de Datos)
 INSERT INTO flags_auditoria (flag_code, descripcion) VALUES 
